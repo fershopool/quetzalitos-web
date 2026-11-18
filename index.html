@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Quetzalitos · Yogurt griego y pays artesanales</title>
+  <meta name="description" content="Yogurt griego a granel y en postre, y pays artesanales. Encuéntranos en cafeterías del IPN o pide directo por WhatsApp.">
+  <meta name="theme-color" content="#0F3D2E">
+  <link rel="icon" href="img/quetzal.png" type="image/png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="Quetzalitos">
+  <meta property="og:title" content="Quetzalitos · Yogurt griego y pays artesanales">
+  <meta property="og:description" content="Yogurt griego a granel y en postre, y pays artesanales. Encuéntranos en cafeterías del IPN o pide directo por WhatsApp.">
+  <meta property="og:image" content="img/logo-nuevo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500..800;1,500..800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="mapa/vendor/maplibre-gl.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#productos">Saltar al contenido</a>
+  <div class="progress" aria-hidden="true"></div>
+
+  <!-- Menú: arriba en escritorio, barra inferior fija en móvil -->
+  <nav class="nav" aria-label="Principal">
+    <a class="nav__brand" href="#inicio"><img src="img/quetzal.png" alt="" width="40" height="40"><span>Quetzalitos</span></a>
+    <ul class="nav__links">
+      <li><a class="nav__link is-active" href="#inicio"><span class="nav__icon" aria-hidden="true">🏠</span><span class="nav__label">Inicio</span></a></li>
+      <li><a class="nav__link" href="#productos"><span class="nav__icon" aria-hidden="true">🍓</span><span class="nav__label">Productos</span></a></li>
+      <li><a class="nav__link" href="#mapa"><span class="nav__icon" aria-hidden="true">📍</span><span class="nav__label">Cafeterías</span></a></li>
+      <li><a class="nav__link" href="#contacto"><span class="nav__icon" aria-hidden="true">💬</span><span class="nav__label">Contacto</span></a></li>
+      <li><button class="nav__link nav__cart" type="button" id="cart-open" aria-haspopup="dialog" aria-controls="cart"><span class="nav__icon" aria-hidden="true">🛒</span><span class="nav__label">Pedido</span><span class="nav__badge" id="cart-count" hidden>0</span></button></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero__sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="hero__text">
+        <p class="eyebrow reveal">Hecho a mano en la CDMX</p>
+        <h1 class="hero__title reveal">Yogurt griego y pays que <em>vuelan</em> de las cafeterías</h1>
+        <p class="hero__lead reveal">Cremoso, artesanal y sin complicaciones. Pruébalo en tu escuela o pídelo directo con nosotros.</p>
+        <div class="hero__cta reveal">
+          <a class="btn btn--primary" href="#productos">Ver productos</a>
+          <a class="btn btn--ghost" href="#mapa">¿Dónde encontrarnos?</a>
+        </div>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <span class="glint glint--a"></span>
+        <span class="glint glint--b"></span>
+        <span class="glint glint--c"></span>
+        <div class="hero__card">
+          <img class="hero__logo" src="img/logo-nuevo.jpg" alt="" width="823" height="900">
+        </div>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Yogurt griego</span><span>★</span><span>A granel</span><span>★</span><span>En postre</span><span>★</span><span>Pays artesanales</span><span>★</span><span>Hecho en CDMX</span><span>★</span>
+          <span>Yogurt griego</span><span>★</span><span>A granel</span><span>★</span><span>En postre</span><span>★</span><span>Pays artesanales</span><span>★</span><span>Hecho en CDMX</span><span>★</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--cream" id="productos">
+      <header class="section__head reveal">
+        <p class="eyebrow">Nuestros productos</p>
+        <h2>Antojos <em>con alas</em></h2>
+        <p>Agrega lo que quieras a tu pedido y envíanoslo por WhatsApp. Te confirmamos precio y entrega.</p>
+        <span class="ornament" aria-hidden="true">✦</span>
+      </header>
+      <div class="products">
+        <article class="product reveal reveal--left" data-id="yogurt-granel">
+          <div class="product__media"><img src="img/yogurt-granel.png" alt="Bote de yogurt griego a granel con tazón y cuchara" loading="lazy" width="720" height="720"></div>
+          <div class="product__body">
+            <span class="tag">A granel</span>
+            <h3>Yogurt griego a granel</h3>
+            <p>Natural, espeso y cremoso. Ideal para tu casa, tu negocio o tu cafetería. Por litro.</p>
+            <div class="product__foot">
+              <span class="price price--ask">Precio por litro · cotiza</span>
+              <button class="btn btn--primary btn--add" type="button" data-add="yogurt-granel">Agregar</button>
+            </div>
+          </div>
+        </article>
+        <article class="product reveal reveal--zoom" data-id="yogurt-postre">
+          <div class="product__media"><img src="img/yogurt-postre.png" alt="Vasito de yogurt griego con granola, fresas, moras y miel" loading="lazy" width="720" height="720"></div>
+          <div class="product__body">
+            <span class="tag tag--gold">El favorito</span>
+            <h3>Yogurt griego en postre</h3>
+            <p>Vasito listo para comer con capas de fruta, granola y miel. El que encuentras en las cafeterías.</p>
+            <div class="product__foot">
+              <span class="price">$30 <small>pieza</small></span>
+              <button class="btn btn--primary btn--add" type="button" data-add="yogurt-postre">Agregar</button>
+            </div>
+          </div>
+        </article>
+        <article class="product reveal reveal--right" data-id="pay">
+          <div class="product__media"><img src="img/pay.png" alt="Pay artesanal con frutos rojos y una rebanada servida" loading="lazy" width="720" height="720"></div>
+          <div class="product__body">
+            <span class="tag tag--rose">Sobre pedido</span>
+            <h3>Pays artesanales</h3>
+            <p>Costra de galleta, relleno cremoso y fruta encima. Entero o por rebanada.</p>
+            <div class="product__foot">
+              <span class="price price--ask">Entero o rebanada · cotiza</span>
+              <button class="btn btn--primary btn--add" type="button" data-add="pay">Agregar</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="mapa">
+      <header class="section__head reveal">
+        <p class="eyebrow">Cafeterías</p>
+        <h2>Encuéntranos <em>cerca de ti</em></h2>
+        <p>Toca una cafetería para verla en el mapa.</p>
+        <span class="ornament" aria-hidden="true">✦</span>
+      </header>
+      <div class="map-wrap reveal">
+        <div class="map" id="map" role="application" aria-label="Mapa de cafeterías con productos Quetzalitos"></div>
+        <div class="zones" id="zones" role="group" aria-label="Zonas del mapa"></div>
+        <!-- app.js llena esta lista: <li><button class="place" data-i="0"><strong>Nombre</strong><span>Zona</span></button></li> -->
+        <ul class="places" id="places"></ul>
+      </div>
+    </section>
+
+    <section class="section section--botanical" id="contacto">
+      <div class="contact">
+        <div class="contact__pitch reveal">
+          <p class="eyebrow">Vende Quetzalitos</p>
+          <h2>¿Tienes una cafetería <em>o negocio?</em></h2>
+          <p>Te surtimos yogurt y pays frescos, con entregas constantes y precio de mayoreo. Cuéntanos de tu negocio y te contactamos.</p>
+          <ul class="perks">
+            <li>Entrega directa en tu punto de venta</li>
+            <li>Producto fresco, hecho cada semana</li>
+            <li>Precio especial por volumen</li>
+          </ul>
+          <img class="contact__art" src="img/mascotas-run.jpg" alt="El quetzal, el cacomixtle y el ajolote de Quetzalitos corriendo" loading="lazy">
+        </div>
+        <form class="form reveal" id="contact-form">
+          <label>Tu nombre<input name="nombre" required autocomplete="name" maxlength="80"></label>
+          <label>Negocio o escuela<input name="negocio" autocomplete="organization" maxlength="80"></label>
+          <label>Me interesa
+            <select name="interes">
+              <option>Vender Quetzalitos en mi cafetería</option>
+              <option>Comprar yogurt a granel</option>
+              <option>Pedir pays para un evento</option>
+              <option>Otra cosa</option>
+            </select>
+          </label>
+          <label>Mensaje<textarea name="mensaje" rows="4" maxlength="500" placeholder="Cuéntanos qué necesitas"></textarea></label>
+          <button class="btn btn--primary btn--wa" type="submit">Enviar por WhatsApp</button>
+          <p class="form__note">Se abre WhatsApp con tu mensaje listo para enviar.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="img/logo-nuevo.jpg" alt="Quetzalitos" width="200" height="218" loading="lazy">
+    <p>Yogurt griego y pays artesanales · Ciudad de México</p>
+  </footer>
+
+  <!-- Pedido (carrito): app.js alterna la clase .is-open en #cart y #cart-backdrop -->
+  <div class="backdrop" id="cart-backdrop" hidden></div>
+  <aside class="cart" id="cart" role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden>
+    <header class="cart__head">
+      <h2 id="cart-title">Tu pedido</h2>
+      <button class="cart__close" type="button" id="cart-close" aria-label="Cerrar pedido">✕</button>
+    </header>
+    <p class="cart__empty" id="cart-empty">Aún no agregas nada. ¡Elige tu antojo!</p>
+    <!-- app.js llena: <li class="cart__item"><span class="cart__name">Nombre</span><div class="qty"><button data-dec="id" aria-label="Quitar uno">−</button><output>2</output><button data-inc="id" aria-label="Agregar uno">+</button></div><span class="cart__sub">$60 | Por cotizar</span></li> -->
+    <ul class="cart__items" id="cart-items"></ul>
+    <footer class="cart__foot">
+      <p class="cart__total"><span>Total</span><strong id="cart-total">$0</strong></p>
+      <button class="btn btn--primary btn--wa" type="button" id="cart-send" disabled>Pedir por WhatsApp</button>
+    </footer>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="mapa/vendor/pmtiles.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script src="motion.js"></script>
+</body>
+</html>
